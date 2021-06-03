@@ -1,0 +1,21 @@
+.logo{
+  display: inline-block;
+  margin-right: 59px;
+}
+
+.logo__img{
+  display: block;
+  width: 116px;
+  height: 25px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1010px){
+
+  .logo{
+    margin-right: 30px;
+  }
+}
