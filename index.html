@@ -10,24 +10,28 @@
 <body>
 
   <header class="site-header">
-    <div class="container">
-      <div class="site-header__left-box">
-        <a class="logo" href="index.html"></a>
-        <nav class="sitenav">
-          <ul class="sitenav__list">
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">About</a>
-            </li>
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Location</a>
-            </li>
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Careers</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div class="container site-header__container">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" alt="Site logo" width="108" height="28">
+      </a>
+      <nav class="sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">About</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Location</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Careers</a>
+          </li>
+        </ul>
+        <a class="site-header__btn btn" href="#">Get Scootin</a>
+      </nav>
     </div>
+    <button class="site-header__toggler" type="button" aria-label="Menu button"></button>
   </header>
+
+  <script src="script.js"></script>
 </body>
 </html>

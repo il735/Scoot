@@ -1,0 +1,19 @@
+.btn{
+  text-decoration: none;
+  color: #fff;
+  padding: 14px 39px;
+  background-color: #FCB72B;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+
+  &:hover{
+    background-color: #fff;
+    color: #FCB72B;
+    box-shadow: 1px 1px 0px 0px #FCB72B, -1px -1px 0px 0px #FCB72B, -1px 1px 0px 0px #FCB72B, 1px -1px 0px 0px #FCB72B;
+  }
+
+  &:active{
+    box-shadow: inset 0px 2px 5px 0px #FCB72B;
+  }
+}

@@ -1,6 +1,12 @@
 .logo{
   display: inline-block;
-  margin-right: 59px;
+  margin-right: 58px;
+}
+.logo:hover{
+  opacity: 0.8;
+}
+.logo:active{
+  opacity: 0.6;
 }
 
 .logo__img{
@@ -10,12 +16,26 @@
 }
 
 
-
-
-
-@media only screen and (max-width: 1010px){
+@media only screen and (max-width: 768px){
 
   .logo{
     margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 670px){
+
+  .logo{
+    margin-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 470px){
+
+  .logo{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
