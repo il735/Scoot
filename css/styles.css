@@ -974,4 +974,119 @@ img {
     background-image: url("../img/riding@2x.png");
   }
 }
+
+.features {
+  padding-top: 100px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.features__item {
+  position: relative;
+  z-index: 30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 300px;
+}
+
+.features__item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.features__item-box {
+  max-width: 445px;
+}
+
+.features__heading {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #495567;
+  margin: 0;
+  margin-bottom: 24px;
+  letter-spacing: -2.14286px;
+}
+
+.features__text {
+  font-family: "Lexend Deca";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.features__img {
+  position: absolute;
+  height: 445px;
+}
+
+.features__img--odd {
+  left: 50%;
+  -webkit-transform: translate(30px);
+          transform: translate(30px);
+}
+
+.features__img--even {
+  right: 50%;
+  -webkit-transform: translate(-130px);
+          transform: translate(-130px);
+}
+
+@media only screen and (max-width: 1025px) {
+  .features__list {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .features__item:not(:last-child) {
+    margin-bottom: 160px;
+  }
+  .features__item:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .features__img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 516px) {
+  .features__heading {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.42857px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
