@@ -437,6 +437,7 @@ img {
 @media only screen and (max-width: 470px) {
   .site-header {
     position: fixed;
+    z-index: 1000000;
     width: 100%;
     left: 0;
     top: 0;
@@ -466,7 +467,7 @@ img {
   }
   .site-header--open .site-header__toggler {
     background-image: url("../img/close.svg");
-    z-index: 30;
+    z-index: 300;
   }
   .site-header--open .sitenav {
     display: -webkit-box;
@@ -480,12 +481,12 @@ img {
         -ms-flex-align: start;
             align-items: flex-start;
     position: fixed;
-    z-index: 30;
+    z-index: 300;
     left: 0;
     top: 0;
     height: 100vh;
     width: 50%;
-    background-color: #939caafb;
+    background-color: #939caaf3;
     padding-top: 17%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -498,6 +499,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-right: 0;
+    z-index: 300;
   }
   .site-header--open .site-header__btn {
     display: block;
@@ -659,5 +661,141 @@ img {
 .btn:active {
   -webkit-box-shadow: inset 0px 2px 5px 0px #FCB72B;
           box-shadow: inset 0px 2px 5px 0px #FCB72B;
+}
+
+.hero {
+  position: relative;
+  z-index: 100;
+  padding: 153px 0;
+  background-image: url("../img/man-with-scooter.jpg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 370px) top -970px;
+  background-size: 2610px 1740px;
+}
+
+.hero__bag-color::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #2f3b59;
+  opacity: 0.75;
+}
+
+.hero__bag-color::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../img/hero-arrow.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 420px) bottom 137px;
+  background-size: 783px 138px;
+}
+
+.hero__info {
+  max-width: 500px;
+  position: relative;
+  z-index: 500;
+}
+
+.hero__heading {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.hero__content-box {
+  max-width: 405px;
+  margin-left: auto;
+}
+
+.hero__text {
+  font-family: "Lexend Deca";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.hero__text::before {
+  position: absolute;
+  z-index: 30;
+  left: -43%;
+  top: 63%;
+  content: "";
+  width: 203px;
+  height: 10px;
+  background-color: #FCB72B;
+  display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero__text::before {
+    display: none;
+  }
+  .hero__bag-color::after {
+    background-position: left calc(50%) bottom;
+  }
+  .hero__info {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 573px;
+  }
+  .hero__heading {
+    margin-bottom: 24px;
+  }
+  .hero__content-box {
+    max-width: 573px;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .hero {
+    background-position: left calc(50% + 180px) top -970px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .hero {
+    background-position: left calc(50% + 130px) top -970px;
+  }
+  .hero__heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .hero__text {
+    margin-bottom: 34px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .hero {
+    background-position: left calc(50% - 180px) top -970px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../img/man-with-scooter@2x.jpg");
+  }
+  .hero__bag-color::after {
+    background-image: url("../img/hero-arrow@2x.png");
+  }
 }
 /*# sourceMappingURL=styles.css.map */
