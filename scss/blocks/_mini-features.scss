@@ -1,0 +1,186 @@
+.mini-features{
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.mini-features__list{
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+
+  &::before{
+    position: absolute;
+    z-index: -50;
+    right: 31%;
+    top: 48px;
+    content: "";
+    width: 974px;
+    height: 15px;
+    background-color: #E5ECF4;
+    display: block;
+  }
+}
+
+.mini-features__item{
+  max-width: 350px;
+}
+
+.mini-features__heading{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #495567;
+  margin: 0;
+  margin-bottom: 27px;
+
+  &::before{
+    content: "";
+    width: 96px;
+    height: 96px;
+    display: block;
+    background-color: #FCB72B;
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+  &--locate::before{
+    background-image: url("../img/phone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 39px 48px;
+  }
+  &--pick::before{
+    background-image: url("../img/scooter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 43px 32px;
+  }
+  &--enjoy::before{
+    background-image: url("../img/riding.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+}
+
+.mini-features__text{
+  font-family: "Lexend Deca";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1110px){
+
+  .mini-features__list{
+    flex-direction: column;
+    align-items: center;
+
+    &::before{
+      width: 15px;
+      height: 513px;
+      left: calc(50% - 350px);
+      top: -160px;
+    }
+  }
+
+  .mini-features__item{
+    max-width: 500px;
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+  }
+
+  .mini-features__heading{
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      position: absolute;
+      z-index: 3;
+      left: -140px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 820px){
+
+  .mini-features__list::before{
+    left: calc(50% - 300px);
+  }
+
+  .mini-features__item{
+    max-width: 398px;
+  }
+}
+
+@media only screen and (max-width: 769px){
+
+  .mini-features__list{
+    align-items: flex-end;
+
+    &::before{
+      left: calc(50% - 150px);
+    }
+  }
+}
+
+@media only screen and (max-width: 720px){
+
+  .mini-features__list::before{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  .mini-features__list{
+    text-align: center;
+    align-items: center;
+  }
+
+  .mini-features__item:not(:last-child){
+    margin-bottom: 48px;
+    max-width: 440px;
+  }
+
+  .mini-features__heading::before{
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+  }
+}
+
+
+
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .mini-features__heading{
+    &--locate::before{
+      background-image: url("../img/phone@2x.png");
+    }
+    &--pick::before{
+      background-image: url("../img/scooter@2x.png");
+    }
+    &--enjoy::before{
+      background-image: url("../img/riding@2x.png");
+    }
+  }
+}
