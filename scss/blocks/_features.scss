@@ -1,5 +1,6 @@
 .features{
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .features__list{
@@ -62,6 +63,12 @@
   }
 }
 
+@media only screen and (max-width: 1500px){
+  .features__img{
+    display: none;
+  }
+}
+
 @media only screen and ( max-width: 1025px){
 
   .features__list{
@@ -78,10 +85,6 @@
     &:nth-child(even){
       flex-direction: column-reverse;
     }
-  }
-
-  .features__img{
-    display: none;
   }
 }
 
